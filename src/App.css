@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+main {
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 300px;
+  width: 150px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-clicked {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 300px;
+  width: 150px;
+  transform: scale(1.1);
+  transition: all 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.card-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  padding: 0.2rem 1rem;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  border-top: 1px solid gray;
+}
+.card-bottom-clicked {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 32%;
+  padding: 0.2rem 1rem;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  border-top: 1px solid gray;
+}
+.copied {
+  color: red;
+}
+
+@media screen and (max-width: 480px) {
+  .card-clicked {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 200px;
+    width: 100px;
+    transform: scale(1.1);
+    transition: all 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  main {
+    justify-content: center;
+  }
+  .card {
+    height: 200px;
+    width: 100px;
+  }
+
+  .card-bottom,
+  .card-bottom-clicked {
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 720px) {
+  main {
+    justify-content: space-around;
+  }
+}
